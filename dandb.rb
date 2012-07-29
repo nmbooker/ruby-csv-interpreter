@@ -3,12 +3,12 @@
 # I said "how do I want to be able to process CSV files in my app"
 # and wrote the library to accommodate that.
 
-require 'csvparser'
+require 'csv-interpreter'
 
 inputfile = $stdin
 
 csv = CSV.new(inputfile)
-hashes = CSVParser.parse(csv) do |p|
+hashes = CSVInterpreter.parse(csv) do |p|
   p.has_header = true
   p.column_id_method = :column_index    # could also identfy columns by their headings
   # Get rid of any rows that start with a formfeed character.
