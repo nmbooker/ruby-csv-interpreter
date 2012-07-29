@@ -1,7 +1,7 @@
 #! /usr/bin/env ruby
 
 require 'csv'
-require 'csvparser'
+require 'csv-interpreter'
 require 'date'
 
 infile = $stdin
