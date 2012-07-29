@@ -2,7 +2,7 @@
 
 require 'csv'
 
-class CSVParser
+class CSVInterpreter
   def initialize(&block)
     @has_header = true     # default
     @column_id_method = :column_index    # default.  Could also be :heading

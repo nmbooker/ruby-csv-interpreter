@@ -8,7 +8,7 @@ infile = $stdin
 outfile = $stdout
 
 csv = CSV.new($stdin)
-records = CSVParser.parse(infile) do |p|
+records = CSVInterpreter.parse(infile) do |p|
   p.has_header = true   # causes the first row to be discarded
   p.column_id_method = :column_index  # columns are identified by index in the p.format block.  This is the only option at the moment.
 
